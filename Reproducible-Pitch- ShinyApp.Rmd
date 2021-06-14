@@ -1,0 +1,129 @@
+---
+title: "Probability and Normal Distribution using Shiny"
+author: "Ami S"
+date: "14/06/2021"
+output:
+  ioslides_presentation: default
+  html_document:
+    number_sections: yes
+    toc: yes
+  slidy_presentation: default
+mode: selfcontained
+job: Reproducible Pitch Presentation
+subtitle: Developing Data Products Course Project
+---
+
+## ***Introduction:***
+
+This presentation is part of the Developing Data Products Coursera.org course project submission.
+
+It is an R Presentation generated with RStudio.
+
+The Shiny application pitched for this presentation is at 
+
+
+The Shiny app source code is available at:
+https://github.com/Dr-A-Soni/Shiny-Application-and-Reproducible-Pitch.
+
+## ***Application Overview:***
+
+- This Application is written in Shiny which is a web application framework for R Studio.
+
+- The source code for this application consist of two files: server.R and ui.R.
+
+- The ui.R includes the user-interface definition, wherein the sidebar layout template
+is used, also with the main panel and provides the overall template for the code.
+
+- The server.R includes the server logic of the Shiny web application.
+
+- This application is hosted on R-studio's shiny server in the cloud(Shinyapp.io)
+
+## ***How it works?***
+###  ***The Application contains: Left Panel:***
+
+- All the Left panel portion while the tabs and title in the main panel are all done in the ui.R
+
+- The main title is written using the text Input in the ui.R.
+
+- The first part of the panel is the selection of Random numbers using the
+numericInput. I kept the range of the random numbers selection between 1 to 1000,
+within which a range of number with minimum and maximum inputs are selected.
+
+----
+
+- Next is the selection of the mean under the slider panel. Here the option
+for mean ranges from 0 to 100 and the slider provides an easy option to select 
+any mean in that range from the panel.
+
+- Following the mean option, comes the selection of the Standard Deviation. Its
+selection is same as mean ranging from 0 to 100 by help of sliding panel.
+
+-Finally the last button on the side panel is the Update Button, which refreshes
+the selection and confirms it every time for a new plot and calculations. This 
+option is carried out by using SubmitInput.
+
+----
+
+###  ***The Application contains: Main Panel:***
+
+The main panel consist of 3 tabs, which were generated in ui.server. However,
+the execution in this tabs is carried out through server.R
+
+- The first tab show the plot of the normal distribution where the inputs are 
+selected from the side Panel.
+  - THe plot shows the distribution where the x axis is based on the range of the 
+  random numbers selected from the first side panel.
+  - THe plot point are orange in color with pch-shape(11), which generates the 
+  normal bell curve using the rnorm, mean and standard deviation selected and process
+  through the code of probability via dnorm.
+  
+---- 
+  
+- The second tab consist of the Histogram. The code is for this plot is also 
+written in server.R like the previous plot.
+  - It uses that same data as used in the previous plot. 
+  -It basic criteria behind the tab is to just give you different understanding 
+  as to how the plot and histogram are different in terms of view when written
+  using same inputs.
+  
+- The third tab is the Probability Tab. 
+  - This tab calculates the probability using the formula provided in the
+  server.R and gives  you the answer.
+  
+
+## ***Conclusion:***
+  
+  The main Idea behind selection the topic of Probability and Distribution 
+  is to provide a general idea how the normal distribution looks like, and 
+  to present it in a way of a playful app, which will encourage an interest in 
+  this field.
+  This application is a basic and very easy to use even for someone who knows
+  nothing about the  distribution and probability.
+  It is also an easy tool for calculating probability for anyone requiring any
+  in their work.
+  
+
+## ***Ready to give it a try?***
+
+This application can be used from the below link:
+
+  - https://dr-a.shinyapps.io/DDP_Project/
+
+While the source code is available from:
+
+  - https://github.com/Dr-A-Soni/Shiny-Application-and-Reproducible-Pitch.
+
+Here's how the app look:
+
+& Thank You!!
+
+----
+
+![Normal_Distribution](C:/users/admin/OneDrive/Desktop/shinyapp2.png){fig.width=250, height=250}
+
+
+----
+![Probability](C:/users/admin/OneDrive/Desktop/shinyapp3.png){fig.width=200, height=250}
+----
+![Histogram](C:/users/admin/OneDrive/Desktop/shinyapp1.png){fig.width=200, height=250}
+
